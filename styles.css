@@ -1,0 +1,64 @@
+/* container */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: 
+  "head head head"
+  "main main main";
+  justify-items: center;
+  align-items: center;
+}
+/* Header */
+
+.header {
+  grid-area: head;
+}
+
+.hamburger {
+  height: 16px;
+}
+
+.magglass {
+  height: 16px;
+}
+
+.logo {
+  height: 150px;
+}
+
+.header-button {
+  background: #567b95;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  height: 30px;
+  border-radius: 3px;
+}
+
+/* Main */
+
+.main-photo {
+  height: 700px; /*temp sizing*/
+}
+
+.inflation-pic {
+  height: 700px; /*temp sizing*/
+}
+
+.telescope-pic {
+  height: 700px; /*temp sizing*/
+}
+
+.footnote {
+  font-size: 10px; /*temp sizing*/
+}
+
+.comment-button {
+  background: #567b95;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  height: 30px;
+  border-radius: 3px;
+}

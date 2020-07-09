@@ -1,8 +1,62 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
 /* container */
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 600px 1fr 1fr;
-  grid-template-rows: 40px 500px;
+  grid-template-rows: 40px 1fr;
 }
 
 /* header */
@@ -69,31 +123,137 @@
   margin-top: 10px;
 }
 
-/* main */
+/* title */
 
-.main {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  background: lightgoldenrodyellow;
-  
-}
-
-.main-title {
+.title {
   grid-column: 3 / 4;
   margin-top: 100px;
 }
 
-.main-photo {
+.title-photo {
   grid-column: 2 / 5;
-  margin-top: 150px;
+  margin: 150px 0 0 0;
 }
 
-.main-photo figcaption {
+.title-photo figcaption {
   width: 75%;
   font-size: 13px;
   color: gray;
 }
 
-.main-photo img {
+.title-photo img {
   width: 100%;
 }
+
+/* main */
+p,
+h4,
+h6,
+h3 { /* div is temp for youtube*/
+  grid-column: 3 / 4;
+}
+
+.inflation {
+  grid-column: 2 / 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20px 40px 150px 150px 150px 1fr;
+  grid-auto-flow: row;
+  margin: 10px 75px;
+  background-image: url(images/inflation-945.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 75px;
+
+}
+
+.inflation h3 {
+  grid-column: 1 / 3;
+  margin: 0;
+}
+
+.inflation .theory {
+  grid-column: 1 / -1;
+  font-size: 13px;
+  color: gray;
+  margin: 5px 0;
+}
+
+/* picture comments */
+
+.inflation .comment{
+  font-size: 13px;
+  padding: 0 5px;
+}
+.inflation .one {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+}
+
+.inflation .two {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+
+.inflation .three {
+  grid-column: 3 / 4;
+  grid-row: 4 / 5;
+}
+
+.inflation .four {
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+}
+
+.inflation .five {
+  grid-column: 1 / 2;
+  grid-row: 6 / 7;
+}
+
+.inflation .six {
+  grid-column: 2 / 3;
+  grid-row: 6 / 7;
+}
+
+.inflation .seven {
+  grid-column: 3 / 4;
+  grid-row: 6 / 7;
+}
+
+.inflation .eight {
+  grid-column: 4 / 5;
+  grid-row: 6 / 7;
+}
+
+.inflation figcaption {
+  grid-column: 1 / 3;
+  grid-row: 7;
+  font-size: 13px;
+}
+
+iframe { 
+  grid-column: 3 / 4;
+}
+
+.bicep {
+  margin: 10px 200px;
+  grid-column: 2 / 5;
+}
+
+.bicep img {
+  width: 100%;
+}
+
+.bicep figcaption{
+  font-size: 13px;
+}
+
+.footnote {
+  font-size: 10px;
+}
+
+.comment-button {
+  grid-column: 3 / 4;
+  width: 50%;
+}
+
